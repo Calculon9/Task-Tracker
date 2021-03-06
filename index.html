@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock">
+        <div id="output"></div>
+    </div>
+    <div id="container">
+        <div class="form">
+            <div id="inner-form">
+                <div id="title-creator" class="border">
+                    <h3>Create Card</h3>
+                </div>
+                <form>
+                    <div class="form-item">
+                        <label for="title-form">Title</label>
+                        <input type="text" id="title-form" class="border">
+                    </div>
+                    <div class="form-item">
+                        <label for="description-form">Decription</label>
+                        <textarea id="description-form" class="border"></textarea>
+                    </div>
+                    <div class="form-item">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" class="border">
+                    </div>
+                    <button id='add-item'>ADD ITEM</button>
+                    <div id="message"></div>
+                </form> 
+            </div>  
+        </div>
+        <div id="calender-deck"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

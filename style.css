@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 230, 0);
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+/* CLOCK STYLES */
+
+.clock {
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+    width: 400px;
+    background-color: #000000af;
+    border-radius: 8px;
+}
+
+
+/* CARD CREATOR STYLES */
+
+#container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#inner-form {
+    width: 250px;
+    background-color: rgb(224, 164, 36);
+    border-radius: 8px;
+    box-shadow: 3px 3px  rgba(0, 0, 0, 0.212);
+}
+
+::placeholder {
+    color: red;
+    opacity: 1; 
+  }
+
+form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#description-form {
+   resize: none;
+   height: 100px;
+}
+
+input, textarea {
+    background-color: rgb(250, 241, 161);
+    width: 95%;
+}
+
+.form-item {
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0000008f;
+}
+
+#add-item {
+    padding: 5px;
+    margin-top: 20px;
+    background-color: rgb(255, 230, 0);
+    color:  #000000af;
+    font-size: 1.2rem;
+    border-style: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#add-item:hover {
+    background-color: rgb(255, 240, 120);
+}
+
+.border {
+    border-radius: 3px;
+    border: none;  
+}
+
+#title-creator {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color:  rgb(184, 103, 28);
+    padding: ;
+}
+
+.warning {
+    padding: 5px;
+    margin-top: 20px;
+    background-color: rgba(255, 0, 0, 0.76);
+    color:  #e5ff00;
+    text-align: center;
+    font-size: 1rem;
+    border: solid black 1px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.success {
+    padding: 5px;
+    margin-top: 20px;
+    background-color: rgba(77, 240, 27, 0.76);
+    color:  black;
+    text-align: center;
+    font-size: 1rem;
+    border: solid black 1px;
+    border-radius: 2px;
+    font-weight: bold;  
+}
+
+/* CARDS */
+
+#calender-deck {
+   width: 100 px;
+   display: grid;
+   grid-template-columns: repeat(2, 250px);
+   grid-template-rows: repeat(4, auto);
+   grid-gap: 10px;
+}
+
+.card {
+    width: 250px;
+    background-color: rgba(139, 69, 19, 0.678);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.212);
+}
+
+.card-item {
+    padding: 5px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrap {
+    word-wrap: break-word;
+    word-break:break-all
+}
+
+#card-title {
+    padding: 20px;
+    color: ;
+    font-size: 2rem;
+    background-color: rgb(184, 103, 28);
+    border-radius: 5px;
+}
+
+#card-description {
+    color: #744a0ce1;
+    font-size: 1.4rem;
+    background-color: rgb(224, 164, 36);
+}
+
+.remove {
+    border-radius: 0 0 4px 4px;
+    border: solid 1px;
+    padding: 5px;
+    width: 100%;
+    font-weight: bold;
+    color: #000000af;
+    font-size: 1.4rem;
+    background-color: rgba(226, 240, 27, 0.76);
+}

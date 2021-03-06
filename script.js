@@ -121,7 +121,7 @@ function addCard(e) {
 
                         <div id="card-description" class="card-item wrap">${description}</div>
 
-                        <div id="card-due" class="card-item">${dueMonth} ${dueDay}</div>
+                        <div id="card-due" class="card-item">Due: ${dueMonth} ${dueDay}</div>
 
                         <div id="remove" class="card-item"><button class='remove'>Complete</button></div>
 

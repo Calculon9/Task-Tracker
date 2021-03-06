@@ -70,7 +70,7 @@ input, textarea {
     padding: 5px;
     margin-top: 20px;
     background-color: rgb(255, 230, 0);
-    color:  #000000af;
+    color: #000000af;
     font-size: 1.2rem;
     border-style: none;
     border-radius: 5px;
@@ -92,7 +92,6 @@ input, textarea {
     font-size: 1.5rem;
     width: 100%;
     background-color:  rgb(184, 103, 28);
-    padding: ;
 }
 
 .warning {
@@ -148,7 +147,6 @@ input, textarea {
 
 #card-title {
     padding: 20px;
-    color: ;
     font-size: 2rem;
     background-color: rgb(184, 103, 28);
     border-radius: 5px;
@@ -168,5 +166,9 @@ input, textarea {
     font-weight: bold;
     color: #000000af;
     font-size: 1.4rem;
-    background-color: rgba(226, 240, 27, 0.76);
+    background-color: rgb(255, 230, 0);
+}
+
+.remove:hover {
+    background-color: rgb(255, 240, 120);
 }

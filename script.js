@@ -4,6 +4,7 @@ class Clock {
     constructor() {
             this.date = new Date;
             this.month = this.date.getMonth() + 1;
+            this.day = this.date.getDate();
             this.secs = this.date.getSeconds();
             this.mins = this.date.getMinutes();
             this.hours = this.date.getHours();
@@ -24,8 +25,12 @@ class Clock {
     } 
     display() {
         this.update(1);
-        let HMS = [this.hours, this.mins, this.secs].map(item => item < 10 ? `0${item}`:item)
-        document.getElementById('output').innerText = `${HMS[0]} : ${HMS[1]} : ${HMS[2]}`
+
+        let month = this.monthName(this.month);
+        let HMS = [this.hours, this.mins, this.secs, this.day].map(item => item < 10 ? `0${item}`:item);
+
+        document.getElementById('time').innerHTML = `<span class="char">${HMS[0]}</span> <span class="char">:</span> <span class="char">${HMS[1]}</span> <span class="char">:</span> <span class="char">${HMS[2]}</span>`;
+        document.getElementById('date').innerHTML = `<span class="char">${month}</span> <span class="char">${HMS[3]}</span>`;
     }
     run() {
         setInterval(this.display.bind(this),1000);
@@ -106,13 +111,11 @@ function addCard(e) {
     let dueDate = document.querySelector('[type="date"]').value;
 
     // Getting Day and Month from dueDate
-    let dueYear = dueDate.split('').slice(0,4).join('');
     let dueMonth = parseInt(dueDate.split('').slice(5,7).join(''));
     let dueDay = dueDate.split('').slice(9).join('');
 
     // Get month name
     dueMonth = clock.monthName(dueMonth);
-    console.log(dueMonth)
     
 
     // Create HTML for card
@@ -121,7 +124,7 @@ function addCard(e) {
 
                         <div id="card-description" class="card-item wrap">${description}</div>
 
-                        <div id="card-due" class="card-item">Due: ${dueMonth} ${dueDay}</div>
+                        <div id="card-due"><span class="char">Due: ${dueMonth} ${dueDay}</span></div>
 
                         <div id="remove" class="card-item"><button class='remove'>Complete</button></div>
 

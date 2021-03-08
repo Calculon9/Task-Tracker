@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Righteous&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
     background-color: rgb(255, 230, 0);
-    font-family: sans-serif;
+    font-family: ibm plex mono;
+    font-weight: 0;
     color: white;
     font-weight: bold;
 }
@@ -16,10 +19,20 @@ body {
     margin: auto;
     text-align: center;
     width: 400px;
-    background-color: #000000af;
+   
     border-radius: 8px;
 }
+#date {
+    margin-bottom: 5%;
+}
 
+.char {
+    box-shadow: 5px 5px rgba(128, 128, 128, 0.616);
+    background-color: rgb(168, 70, 70);
+    color: rgb(255, 230, 0);
+    border-radius: 10%;
+    padding: 3px;
+}
 
 /* CARD CREATOR STYLES */
 
@@ -31,7 +44,7 @@ body {
 
 #inner-form {
     width: 250px;
-    background-color: rgb(224, 164, 36);
+    background-color: rgb(209, 141, 24);
     border-radius: 8px;
     box-shadow: 3px 3px  rgba(0, 0, 0, 0.212);
 }
@@ -63,22 +76,26 @@ input, textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #0000008f;
+    font-size: 1.3rem;
+    color: rgb(168, 70, 70);
 }
 
 #add-item {
+    font-family: ibm plex mono;
     padding: 5px;
     margin-top: 20px;
-    background-color: rgb(255, 230, 0);
-    color: #000000af;
+    background-color: rgb(168, 70, 70);
+    color: rgb(255, 230, 0);
     font-size: 1.2rem;
     border-style: none;
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #add-item:hover {
-    background-color: rgb(255, 240, 120);
+    background-color: rgb(255, 230, 0);
+    color: rgb(168, 70, 70);
 }
 
 .border {
@@ -87,11 +104,12 @@ input, textarea {
 }
 
 #title-creator {
+    color: rgb(255, 230, 0);
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
     width: 100%;
-    background-color:  rgb(184, 103, 28);
+    background-color: rgb(168, 70, 70);;
 }
 
 .warning {
@@ -121,7 +139,6 @@ input, textarea {
 /* CARDS */
 
 #calender-deck {
-   width: 100 px;
    display: grid;
    grid-template-columns: repeat(2, 250px);
    grid-template-rows: repeat(4, auto);
@@ -135,7 +152,6 @@ input, textarea {
 }
 
 .card-item {
-    padding: 5px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,16 +162,25 @@ input, textarea {
 }
 
 #card-title {
-    padding: 20px;
+    color: rgb(255, 230, 0);
+    padding: 15px;
     font-size: 2rem;
-    background-color: rgb(184, 103, 28);
+    background-color: rgb(168, 70, 70);
     border-radius: 5px;
 }
 
 #card-description {
-    color: #744a0ce1;
+    padding: 15px;
+    color: rgb(168, 70, 70);
     font-size: 1.4rem;
-    background-color: rgb(224, 164, 36);
+    background-color: rgb(209, 141, 24);
+}
+
+#card-due  {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(209, 141, 24);
+    padding-bottom: 15px;
 }
 
 .remove {

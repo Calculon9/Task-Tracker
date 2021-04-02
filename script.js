@@ -31,6 +31,7 @@ class Clock {
 
         document.getElementById('time').innerHTML = `<span class="char">${HMS[0]}</span> <span class="char">:</span> <span class="char">${HMS[1]}</span> <span class="char">:</span> <span class="char">${HMS[2]}</span>`;
         document.getElementById('date').innerHTML = `<span class="char">${month}</span> <span class="char">${HMS[3]}</span>`;
+       
     }
     run() {
         setInterval(this.display.bind(this),1000);
